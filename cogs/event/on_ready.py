@@ -7,7 +7,7 @@ class Events_bot(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print(">>> BOT   | is ready\n>>> LOGS:")
+        print(">>>READY\n>>> LOGS:")
         i = 0
         if self.bot.guilds is not None:
             for guild in self.bot.guilds:
@@ -17,4 +17,4 @@ class Events_bot(commands.Cog):
 
 def setup(bot: commands.Bot):
     bot.add_cog(Events_bot(bot))
-    print(f">>> Cogs  | is ready  | {__name__} ")
+    print(f">>> {__name__} loaded ")
